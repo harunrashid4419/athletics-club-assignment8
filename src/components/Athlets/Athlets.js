@@ -1,17 +1,26 @@
-import profile from '../../images/profile.jpg'
+
 import React, { useEffect, useState } from 'react';
 import Athlet from '../Athlet/Athlet';
 import './Athlets.css';
+import Cart from '../Cart/Cart';
 
 const Athlets = () => {
 
     const [athlets, setAthlets] = useState([]);
+
+    const [carts, setCart] = useState([]);
 
     useEffect(() => {
         fetch('data.json')
             .then(res => res.json())
             .then(data => setAthlets(data))
     }, [])
+
+    const  handlerAddToCart = cart =>{
+        // console.log('clicked', cart)
+        const newCart = [...carts, cart];
+        setCart(newCart);
+    }
 
     return (
         <div className='main-section'>
@@ -20,12 +29,12 @@ const Athlets = () => {
                 <h3>Select today's althlet</h3>
                 <div className="alhlet-container">
                     {
-                        athlets.map(athlet => <Athlet athlet={athlet} key={athlet.id}></Athlet>)
+                        athlets.map(athlet => <Athlet athlet={athlet} key={athlet.id}  handlerAddToCart={handlerAddToCart}></Athlet>)
                     }
                 </div>
             </div>
             <div className="cart-info">
-                <div className="cart-header">
+                {/* <div className="cart-header">
                     <div className="profile">
                         <img src={profile} alt="" />
                         <div className='self-info'>
@@ -57,7 +66,8 @@ const Athlets = () => {
                         <p>seconds</p>
                     </div>
                     <button>Activity Completed</button>
-                </div>
+                </div> */}
+                <Cart carts={carts}></Cart>
             </div>
         </div>
     );

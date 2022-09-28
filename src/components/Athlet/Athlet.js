@@ -1,8 +1,8 @@
 import React from 'react';
 import './Athlet.css';
 
-const Athlet = ({athlet}) => {
-    const {img, name, age, description, time} = athlet;
+const Athlet = (props) => {
+    const {img, name, age, description, time} = props.athlet;
     return (
         <div className='single-athlet'>
             <img src={img} alt="" />
@@ -10,7 +10,7 @@ const Athlet = ({athlet}) => {
             <p>{description}</p>
             <p>For Age: {age}</p>
             <p>For required {time}</p>
-            <button>Add To list</button>
+            <button onClick={() => props.handlerAddToCart(props.athlet)}>Add To list</button>
         </div>
     );
 };
