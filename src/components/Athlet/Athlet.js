@@ -4,7 +4,7 @@ const Athlet = ({athlet}) => {
     const {img, name, age, description, time} = athlet;
     return (
         <div>
-            <h2>{athlet.id}</h2>
+            <h2>{athlet.name}</h2>
         </div>
     );
 };
