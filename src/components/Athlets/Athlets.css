@@ -6,6 +6,11 @@
     background-color: #00000021;
     padding: 50px;
 }
+.alhlet-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
 .cart-info{
     width: 30%;
 }
