@@ -5,7 +5,7 @@
         "img": "https://img.cricketworld.com/images/f-073504/bangladesh-cricket-team.jpg",
         "age": "14-40",
         "description": "Cricket is a bat-and-ball game played between two teams of eleven players on a field at the centre of which is a 22-yard (20-metre) pitch with a wicket at each end, each comprising two bails balanced on three stumps.",
-        "time": "30sec"
+        "time": "30"
     },
     {
         "id": "2",
@@ -13,38 +13,38 @@
         "img": "https://i.ytimg.com/vi/fIZR5Ib1p_w/maxresdefault.jpg",
         "age": "14-38",
         "description": "Football is a family of team sports that involve, to varying degrees, kicking a ball to score a goal. Unqualified, the word football normally means the form of football that is the most popular where the word is used.",
-        "time": "40sec"
+        "time": "40"
     },
     {
         "id": "3",
         "name": "Hadudu",
         "img": "https://previews.agefotostock.com/previewimage/medibigoff/121462845ba2bb31fc126d38484029d2/mwo-mw012329.jpg",
         "age": "15-35",
-        "description": "Kabaddi is a contact team sport. Played between two teams of seven players, the objective of the game is for a single player on offence, referred to as a raider, to run into the opposing team's half of a court, touch out as many of their defenders as possible",
-        "time": "60sec"
+        "description": "Kabaddi is a contact team sport. Played between two teams of seven players, the objective of the game is for a single player on offence, referred to as a raider, to run into the opposing team's half of a court.",
+        "time": "60"
     },
     {
         "id": "4",
         "name": "Reading Book",
         "img": "https://miro.medium.com/max/1000/1*81kOeUZXJ1AhCeZcpGk93g.jpeg",
         "age": "06-90",
-        "description": "Reading books benefits both your physical and mental health, and those benefits can last a lifetime. They begin in early childhood and continue through the senior years. Here’s a brief explanation of how reading books can change your brain — and your body — for the better.",
-        "time": "90sec"
+        "description": "Reading books benefits both your physical and mental health, and those benefits can last a lifetime. They begin in early childhood and continue through the senior years.",
+        "time": "90"
     },
     {
         "id": "5",
         "name": "Workout",
         "img": "https://images.lifestyleasia.com/wp-content/uploads/sites/7/2022/01/10160649/57311748_105357160604789_5204728485146531194_n.jpg",
         "age": "10-80",
-        "description": "The gateway to a mind-body practice, ZEN•GA is designed to stimulate the fascial system and build endurance, strength, mobility and stability while cultivating a greater sense of physical awareness that extends beyond the workout experience.",
-        "time": "900sec"
+        "description": "The gateway to a mind-body practice, ZEN•GA is designed to stimulate the fascial system and build endurance, strength, mobility and stability.",
+        "time": "900"
     },
     {
         "id": "6",
         "name": "Badminton",
         "img": "https://media.gettyimages.com/photos/man-playing-badminton-picture-id654106838?s=612x612",
         "age": "12-50",
-        "description": "Badminton is officially the fastest of all racket sports. Players can hit the shuttlecock at speeds of up to 180mph (288kph) toward their opponent. But, it is not just all about speed; a player can expect to run up to four miles (6.4km) around the court during a match whilst having the agility to maintain energy-busting rallies.",
-        "time": "90sec"
+        "description": "Badminton is officially the fastest of all racket sports. Players can hit the shuttlecock at speeds of up to 180mph (288kph) toward their opponent. But, it is not just all about speed; a player can expect to run up to four miles (6.4km) around the court during a match.",
+        "time": "90"
     }
 ]

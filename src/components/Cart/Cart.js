@@ -1,11 +1,13 @@
 import profile from '../../images/profile.jpg';
 import React from 'react';
+import './Cart.css';
 
-const Cart = ({carts}) => {
+const Cart = ({ carts }) => {
     let second = 0;
-    for(const cart of carts){
+    for (const cart of carts) {
         second = second + parseFloat(cart.time);
     }
+
     return (
         <div>
             <div className="cart-header">
