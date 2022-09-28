@@ -1,0 +1,11 @@
+.main-section{
+    display: flex;
+}
+.players-info{
+    width: 70%;
+    background-color: #00000021;
+    padding: 50px;
+}
+.cart-info{
+    width: 30%;
+}
