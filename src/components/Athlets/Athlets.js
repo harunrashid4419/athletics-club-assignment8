@@ -1,3 +1,4 @@
+import profile from '../../images/profile.jpg'
 import React, { useEffect, useState } from 'react';
 import Athlet from '../Athlet/Athlet';
 import './Athlets.css';
@@ -25,10 +26,12 @@ const Athlets = () => {
             </div>
             <div className="cart-info">
                 <div className="cart-header">
-                    <img src="" alt="" />
-                    <div className='self-info'>
-                        <h2>Md. Harun or rashid</h2>
-                        <p>Natore, Rajshahi</p>
+                    <div className="profile">
+                        <img src={profile} alt="" />
+                        <div className='self-info'>
+                            <h2>Md. Harun or rashid</h2>
+                            <p>Natore, Rajshahi</p>
+                        </div>
                     </div>
                     <div className="weight">
                         <div>
@@ -40,10 +43,20 @@ const Athlets = () => {
                             <h4>Height</h4>
                         </div>
                         <div>
-                            <h3>22 <small>yrs</small></h3>
+                            <h3>22<small>yrs</small></h3>
                             <h4>Age</h4>
                         </div>
                     </div>
+                    <h2>Exercise Details</h2>
+                    <div className="exercise-time">
+                        <h3>Exercise time</h3>
+                        <p>seconds</p>
+                    </div>
+                    <div className="break-time">
+                        <h3>Break time</h3>
+                        <p>seconds</p>
+                    </div>
+                    <button>Activity Completed</button>
                 </div>
             </div>
         </div>
