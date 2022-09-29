@@ -2,7 +2,7 @@ import React from 'react';
 import './Athlet.css';
 
 const Athlet = (props) => {
-    const {img, name, age, description, time} = props.athlet;
+    const {img, name, age, time} = props.athlet;
     return (
         <div className='single-athlet'>
             <img src={img} alt="" />

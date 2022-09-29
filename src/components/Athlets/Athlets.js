@@ -4,7 +4,6 @@ import { faHatCowboySide } from '@fortawesome/free-solid-svg-icons';
 import Athlet from '../Athlet/Athlet';
 import './Athlets.css';
 import Cart from '../Cart/Cart';
-import addToLocalStorage from '../../images/utilties/Fakedb';
 
 const Athlets = () => {
 
@@ -27,7 +26,7 @@ const Athlets = () => {
         <div className='main-section'>
             <div className="players-info">
                 <h1><FontAwesomeIcon icon={faHatCowboySide}></FontAwesomeIcon> Athletics Club</h1>
-                <h3>Select today's althlet</h3>
+                <h3>Select best althlet</h3>
                 <div className="alhlet-container">
                     {
                         athlets.map(athlet => <Athlet athlet={athlet} key={athlet.id}  handlerAddToCart={handlerAddToCart}></Athlet>)

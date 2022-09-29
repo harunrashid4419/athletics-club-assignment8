@@ -46,5 +46,13 @@
         "age": "12-50",
         "description": "Badminton is officially the fastest of all racket sports. Players can hit the shuttlecock at speeds of up to 180mph (288kph) toward their opponent. But, it is not just all about speed; a player can expect to run up to four miles (6.4km) around the court during a match.",
         "time": "90"
+    },
+    {
+        "id": "",
+        "name": "Cycle",
+        "img": "https://media.istockphoto.com/photos/professional-road-cyclist-picture-id477445662?k=20&m=477445662&s=612x612&w=0&h=kXVADT01UblbzGaAdzcEokBG6w8Wvb_l7EUCdLcEsaY=",
+        "age": "8-80",
+        "description": "To those already engrossed in the cycling world, the benefits of cycling will already be abundantly clear, but for anyone who needs a reason to get out on the bike here's a list of some of the biggest perks.  ",
+        "time": "450"
     }
 ]

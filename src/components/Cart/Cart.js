@@ -2,28 +2,45 @@ import profile from '../../images/profile.jpg';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './Cart.css';
-import addToLocalStorage, { getStoredSecond } from '../../images/utilties/Fakedb';
+import { addToLocalStorage, getStoredSecond } from '../../images/utilties/Fakedb';
 import { useEffect, useState } from 'react';
 
 const Cart = ({ carts }) => {
 
-    // const [localStorage, setlocalStorage] = useState([]);
-
+    // count second and show on exersice time
     let second = 0;
     for (const cart of carts) {
         second = second + parseFloat(cart.time);
     }
 
-    const notify = () => toast("Activity Complete!");
+    // toasify code
+    const notify = () => {
+        toast.success('🦄 activity complited!', {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+        });
+    };
 
-    const handleAddToBreak = (value) =>{
-        addToLocalStorage(value);
+    // break time value set
+    const [value, setValue] = useState(0);
+
+    // button handler
+    const handleAddToBreak = (value) => {
+        addToLocalStorage(value);  
+        setValue(value);     
     }
     
-    
-    useEffect(() =>{
+    // get the value of local storage and show on break time
+    useEffect( () =>{
         const storedSecond = getStoredSecond();
-        console.log(storedSecond);
+        if(storedSecond){
+            setValue(storedSecond)
+       }
     }, [])
     
     return (
@@ -53,10 +70,10 @@ const Cart = ({ carts }) => {
                 </div>
                 <h2>Add A Break</h2>
                 <div className="break">
-                    <p onClick={() => handleAddToBreak(10)}>10s</p>
-                    <p onClick={() => handleAddToBreak(20)}>20s</p>
+                    <p onClick={() => handleAddToBreak(50)}>50s</p>
                     <p onClick={() => handleAddToBreak(30)}>30s</p>
-                    <p onClick={() => handleAddToBreak(40)}>40s</p>
+                    <p onClick={() => handleAddToBreak(20)}>20s</p>
+                    <p onClick={() => handleAddToBreak(90)}>90s</p>
                 </div>
                 <h2>Exercise Details</h2>
                 <div className="exercise-time">
@@ -65,10 +82,20 @@ const Cart = ({ carts }) => {
                 </div>
                 <div className="break-time">
                     <h3>Break time</h3>
-                    <p>{} seconds</p>
+                    <p>{value} seconds</p>
                 </div>
-                <button onClick={notify}>Activity Completed</button>
-                <ToastContainer />
+                <button className='activity-btn' onClick={notify}>Activity Completed</button>
+                <ToastContainer
+                    position="top-right"
+                    autoClose={5000}
+                    hideProgressBar={false}
+                    newestOnTop={false}
+                    closeOnClick
+                    rtl={false}
+                    pauseOnFocusLoss
+                    draggable
+                    pauseOnHover
+                />
             </div>
         </div>
     );
