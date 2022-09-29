@@ -1,10 +1,19 @@
+body{
+    background-color: #00000021;
+}
 .main-section{
     display: flex;
 }
 .players-info{
     width: 70%;
-    background-color: #00000021;
-    padding: 50px;
+    margin: 50px;
+}
+.players-info h1{
+    color: skyblue;
+    font-weight: bold;
+}
+.players-info h3{
+    color: green;
 }
 .alhlet-container{
     display: grid;
@@ -13,23 +22,22 @@
 }
 .cart-info{
     width: 30%;
+    background-color: white;
     padding: 20px;
 }
 
-@media screen and (max-width:1200px){
+ @media screen and (max-width:1200px){
     .alhlet-container{
         grid-template-columns: repeat(2, 1fr);
     }
     .single-athlet {
-        height: 550px;
+        height: 370px;
     }
 }
-@media screen and (max-width: 992px) {
+@media screen and (max-width:800px){
     .single-athlet {
-        height: 620px;
+        height: 480px;
     }
-}
-@media screen and (max-width:767px){
     .alhlet-container{
         grid-template-columns: repeat(1, 1fr);
     }
@@ -37,10 +45,19 @@
         display: block;
     }
     .players-info{
-        width: 86%;
+        width: 100%;
+        margin: 0;
+    }
+    body{
+        padding: 20px;
     }
     .cart-info{
-        width: 90%;
-        padding: 20px;
+        width: 100%;
+        padding: 0px;
+    }
+}
+@media screen and (max-width: 500px) {
+    .single-athlet {
+        height: 470px;
     }
 }

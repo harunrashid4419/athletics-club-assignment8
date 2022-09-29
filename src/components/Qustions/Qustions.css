@@ -1,5 +1,6 @@
 .qustion-container{
-    padding: 30px 100px;
+    padding: 30px;
+    margin-top: 30px;
     background-color: lightgoldenrodyellow;
 }
 .qustion-container h1{

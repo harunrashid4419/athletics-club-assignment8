@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import Athlets from './components/Athlets/Athlets';
 import Qustions from './components/Qustions/Qustions';

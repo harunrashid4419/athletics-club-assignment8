@@ -7,7 +7,6 @@ const Athlet = (props) => {
         <div className='single-athlet'>
             <img src={img} alt="" />
             <h3>{name}</h3>
-            <p>{description}</p>
             <p>For Age: {age}</p>
             <p>For required {time}</p>
             <button onClick={() => props.handlerAddToCart(props.athlet)}>Add To list</button>

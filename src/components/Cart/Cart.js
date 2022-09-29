@@ -1,21 +1,30 @@
 import profile from '../../images/profile.jpg';
-import React from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './Cart.css';
-import addToLocalStorage from '../../images/utilties/Fakedb';
+import addToLocalStorage, { getStoredSecond } from '../../images/utilties/Fakedb';
+import { useEffect, useState } from 'react';
 
 const Cart = ({ carts }) => {
+
+    // const [localStorage, setlocalStorage] = useState([]);
+
     let second = 0;
     for (const cart of carts) {
         second = second + parseFloat(cart.time);
     }
 
-    const notify = () => toast("Wow so easy!");
+    const notify = () => toast("Activity Complete!");
 
     const handleAddToBreak = (value) =>{
         addToLocalStorage(value);
     }
+    
+    
+    useEffect(() =>{
+        const storedSecond = getStoredSecond();
+        console.log(storedSecond);
+    }, [])
     
     return (
         <div>
@@ -24,6 +33,7 @@ const Cart = ({ carts }) => {
                     <img src={profile} alt="" />
                     <div className='self-info'>
                         <h2>Md. Harun or rashid</h2>
+                        <p>Email: harunrashid4419@gmail.com</p>
                         <p>Natore, Rajshahi</p>
                     </div>
                 </div>
@@ -55,7 +65,7 @@ const Cart = ({ carts }) => {
                 </div>
                 <div className="break-time">
                     <h3>Break time</h3>
-                    <p>seconds</p>
+                    <p>{} seconds</p>
                 </div>
                 <button onClick={notify}>Activity Completed</button>
                 <ToastContainer />
