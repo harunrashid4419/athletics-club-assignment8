@@ -35,6 +35,20 @@
 .weight h4{
     margin-top: 3px;
 }
+.break{
+    display: flex;
+    background-color: #DEDEDE;
+    justify-content: space-between;
+    border-radius: 10px;
+}
+.break p{
+    background-color: green;
+    padding: 10px 10px;
+    margin: 30px 10px;
+    font-size: 18px;
+    color: white;
+    border-radius: 50%;
+}
 .exercise-time{
     display: flex;
     justify-content: space-between;

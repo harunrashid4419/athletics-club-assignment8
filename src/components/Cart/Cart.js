@@ -3,6 +3,7 @@ import React from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './Cart.css';
+import addToLocalStorage from '../../images/utilties/Fakedb';
 
 const Cart = ({ carts }) => {
     let second = 0;
@@ -10,18 +11,12 @@ const Cart = ({ carts }) => {
         second = second + parseFloat(cart.time);
     }
 
-    const notify = () => {
-        toast.success('Activity Compleate', {
-            position: "top-right",
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-        });
-    };
+    const notify = () => toast("Wow so easy!");
 
+    const handleAddToBreak = (value) =>{
+        addToLocalStorage(value);
+    }
+    
     return (
         <div>
             <div className="cart-header">
@@ -46,6 +41,13 @@ const Cart = ({ carts }) => {
                         <h4>Age</h4>
                     </div>
                 </div>
+                <h2>Add A Break</h2>
+                <div className="break">
+                    <p onClick={() => handleAddToBreak(10)}>10s</p>
+                    <p onClick={() => handleAddToBreak(20)}>20s</p>
+                    <p onClick={() => handleAddToBreak(30)}>30s</p>
+                    <p onClick={() => handleAddToBreak(40)}>40s</p>
+                </div>
                 <h2>Exercise Details</h2>
                 <div className="exercise-time">
                     <h3>Exercise time</h3>
@@ -56,17 +58,7 @@ const Cart = ({ carts }) => {
                     <p>seconds</p>
                 </div>
                 <button onClick={notify}>Activity Completed</button>
-                <ToastContainer
-                    position="top-right"
-                    autoClose={5000}
-                    hideProgressBar={false}
-                    newestOnTop={false}
-                    closeOnClick
-                    rtl={false}
-                    pauseOnFocusLoss
-                    draggable
-                    pauseOnHover
-                />
+                <ToastContainer />
             </div>
         </div>
     );
