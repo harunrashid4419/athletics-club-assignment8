@@ -21,7 +21,6 @@ const Athlets = () => {
     const  handlerAddToCart = cart =>{
         const newCart = [...carts, cart];
         setCart(newCart);
-        addToLocalStorage(cart)
     }
 
     return (

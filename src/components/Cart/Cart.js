@@ -1,5 +1,7 @@
 import profile from '../../images/profile.jpg';
 import React from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import './Cart.css';
 
 const Cart = ({ carts }) => {
@@ -7,6 +9,18 @@ const Cart = ({ carts }) => {
     for (const cart of carts) {
         second = second + parseFloat(cart.time);
     }
+
+    const notify = () => {
+        toast.success('Activity Compleate', {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+        });
+    };
 
     return (
         <div>
@@ -41,7 +55,18 @@ const Cart = ({ carts }) => {
                     <h3>Break time</h3>
                     <p>seconds</p>
                 </div>
-                <button>Activity Completed</button>
+                <button onClick={notify}>Activity Completed</button>
+                <ToastContainer
+                    position="top-right"
+                    autoClose={5000}
+                    hideProgressBar={false}
+                    newestOnTop={false}
+                    closeOnClick
+                    rtl={false}
+                    pauseOnFocusLoss
+                    draggable
+                    pauseOnHover
+                />
             </div>
         </div>
     );
